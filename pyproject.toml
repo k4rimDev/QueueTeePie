@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "queue_tee_pie"
+version = "0.1.0"
+description = "A lightweight background task library in Python."
+authors = ["karim06-byte <dev8@airgroup.az>", "k4rimdev <karimmirzaguliyev@gmail.com>"]
+license = "Apache"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
