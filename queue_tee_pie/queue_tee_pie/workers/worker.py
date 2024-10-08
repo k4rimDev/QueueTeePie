@@ -27,6 +27,7 @@ class WorkerThread(threading.Thread):
                     self.logger.info(f"Task {task_id} completed successfully")
                 except Exception as e:
                     self.logger.error(f"Task {task_id} failed: {e}")
+                    self.task_queue.retry_task(task_id)
             else:
                 self.logger.info("No tasks found, sleeping for a while...")
                 time.sleep(self.sleep_interval)
