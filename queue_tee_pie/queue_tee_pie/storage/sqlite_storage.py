@@ -1,14 +1,13 @@
 import time
 import sqlite3
 
-from queue_tee_pie.storage import BaseStorage
+from queue_tee_pie.queue_tee_pie.storage import BaseStorage
 
 
 class SQLiteStorage(BaseStorage):
     def __init__(self, db_name="queue_tee_pie.db"):
         """Initialize the SQLite storage with the database file name."""
         self.conn = sqlite3.connect(db_name, check_same_thread=False)
-        print("sasfasfds")
         self._create_table()
 
     def _create_table(self):
@@ -26,7 +25,6 @@ class SQLiteStorage(BaseStorage):
             )
         """
         )
-        print("asfasdf")
         self.conn.commit()
 
     def save_task(self, task_data, priority=1, run_at=None, expiration=None):

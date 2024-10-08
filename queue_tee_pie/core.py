@@ -1,7 +1,7 @@
 import time
 
-from queue_tee_pie.storage.sqlite_storage import SQLiteStorage
-from queue_tee_pie.utils.serializer import TaskSerializer
+from .queue_tee_pie.storage.sqlite_storage import SQLiteStorage
+from .queue_tee_pie.utils.serializer import TaskSerializer
 
 
 class TaskQueue:
@@ -9,7 +9,8 @@ class TaskQueue:
         """
         Initialize the task queue with a storage backend.
 
-        :param storage_backend: Optional storage backend (SQLiteStorage by default)
+        :param storage_backend: Optional storage backend
+                        (SQLiteStorage by default)
         :param max_retries: Number of times a task can be retried on failure
         :param retry_backoff: Time to wait between retries, in seconds
         """
@@ -85,7 +86,6 @@ class TaskQueue:
 if __name__ == "__main__":
     task_queue = TaskQueue()
 
-    # Add a task to the queue
     task_data = {"task_name": "example_task", "params": {"param1": "value1"}}
     task_queue.enqueue_task(task_data, priority=2)
 
