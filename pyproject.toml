@@ -5,6 +5,10 @@ description = "A lightweight background task library in Python."
 authors = ["karim06-byte <dev8@airgroup.az>", "k4rimdev <karimmirzaguliyev@gmail.com>"]
 license = "Apache"
 readme = "README.md"
+homepage = "https://github.com/k4rimDev/QueueTeePie"
+repository = "https://github.com/k4rimDev/QueueTeePie"
+keywords = ["task", "queue", "background", "tasks", "async"]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
