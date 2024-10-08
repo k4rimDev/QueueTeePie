@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 queue_tee_pie.db
+worker.log
