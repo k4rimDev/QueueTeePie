@@ -28,11 +28,11 @@ unittest:
 
 # Run flake8 for linting
 lint:
-	@$(POETRY) run flake8 queue_tee_pie tests
+	@$(POETRY) run flake8 queue_tee_pie
 
 # Run black for code formatting
 format:
-	@$(POETRY) run black queue_tee_pie tests
+	@$(POETRY) run black queue_tee_pie
 
 # Run mypy for type checking
 check-types:

@@ -11,9 +11,12 @@ class BaseStorage(ABC):
         run_at (schedule time), and expiration.
 
         :param task_data: Serialized task data to be stored.
-        :param priority: Task priority (higher numbers = higher priority).
-        :param run_at: Timestamp for scheduled execution (None means immediate execution).
-        :param expiration: Timestamp for when the task expires (None means no expiration).
+        :param priority: Task priority
+                        (higher numbers = higher priority).
+        :param run_at: Timestamp for scheduled execution
+                        (None means immediate execution).
+        :param expiration: Timestamp for when the task expires
+                        (None means no expiration).
         """
         pass
 
