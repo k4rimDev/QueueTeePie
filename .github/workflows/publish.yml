@@ -1,4 +1,4 @@
-name: random_forest_package
+name: queue_tee_pie
 
 on:
   release:
