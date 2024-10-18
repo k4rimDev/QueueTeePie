@@ -12,6 +12,7 @@ keywords = ["task", "queue", "background", "tasks", "async"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+redis = "^5.1.1"
 
 
 [tool.poetry.group.dev.dependencies]
